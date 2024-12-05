@@ -46,9 +46,9 @@
       <m-b>サービスメッシュ</m-b>を実現するためのサービス。
     </p>
 
-    <h2>振り返り</h2>
+    <h2>GKE</h2>
 
-    <h3>KubernetesのProbe</h3>
+    <h3>Probe</h3>
     <table>
       <thead>
         <tr>
@@ -77,6 +77,42 @@
         </tr>
       </tbody>
     </table>
+
+    <h3>主なAPIグループ</h3>
+
+    <h3>RBAC関連のリソース</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>リソース</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>Role</m-b></td>
+          <td>名前空間上で有効な権限の集合。リソース(PodsやDeployments)と動作を指定する。</td>
+        </tr>
+        <tr>
+          <td><m-b>RoleBinding</m-b></td>
+          <td>名前空間上で対象をユーザやグループ、サービスアカウントに紐づける。</td>
+        </tr>
+        <tr>
+          <td><m-b>ClusterRole</m-b></td>
+          <td>クラスタ上で有効な権限の集合。複数の名前空間を横断するリソース(NodesやPersistentVolumes)に適用できる。</td>
+        </tr>
+        <tr>
+          <td><m-b>ClusterRoleBinding</m-b></td>
+          <td>クラスタ上で対象をユーザやグループ、サービスアカウントに紐づける。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Roleで指定できる動作</h3>
+
+    <h3>事前定義のClusterRole</h3>
+
+    <h3>特定の操作が可能か確認するコマンド</h3>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.8/dexie.min.js"
