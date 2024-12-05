@@ -46,6 +46,38 @@
       <m-b>サービスメッシュ</m-b>を実現するためのサービス。
     </p>
 
+    <h2>振り返り</h2>
+
+    <h3>KubernetesのProbe</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Probeの種類</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>Liveness Probe</m-b></td>
+          <td>コンテナが稼働中かチェックする。異常な場合は<m-b>再起動</m-b>が起こる</td>
+        </tr>
+        <tr>
+          <td><m-b>Readiness Probe</m-b></td>
+          <td>
+            コンテナがトラフィックを受けれ入れる準備ができているかチェックする。
+            異常な場合、<m-b>ロードバランシング</m-b>の対象とならない。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Startup Probe</m-b></td>
+          <td>
+            コンテナ内のアプリケーションが起動したかどうかをチェックする。
+            設定する場合、このProbeが完了するまで他のProbeは動作<m-b>しない</m-b>。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.8/dexie.min.js"
       integrity="sha512-Yp2Q03YGorJ+zy5dF6XnTwmtW9MOnJwCG15PH50C5FZcw9TaUHP3ZeSNNkkpjMUD6gOCGyWTLJRkTNjrik9oDA=="
