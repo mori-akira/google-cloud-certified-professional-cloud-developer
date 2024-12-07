@@ -78,8 +78,6 @@
       </tbody>
     </table>
 
-    <h3>主なAPIグループ</h3>
-
     <h3>RBAC関連のリソース</h3>
     <table>
       <thead>
@@ -109,10 +107,51 @@
     </table>
 
     <h3>Roleで指定できる動作</h3>
+    <ul>
+      <li><m-b>*</m-b></li>
+      <li><m-b>create</m-b></li>
+      <li><m-b>delete</m-b></li>
+      <li><m-b>get</m-b></li>
+      <li><m-b>list</m-b></li>
+      <li><m-b>update</m-b></li>
+      <li><m-b>patch</m-b></li>
+      <li><m-b>watch</m-b></li>
+    </ul>
 
     <h3>事前定義のClusterRole</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ClusterRole名</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>cluster-admin</m-b></td>
+          <td>全てのリソースに対し、全てのアクションが可能</td>
+        </tr>
+        <tr>
+          <td><m-b>admin</m-b></td>
+          <td>
+            名前空間に対しバインドし、名前空間上のほとんどリソースのread/writeが可能、Role/RoleBindingリソースのwriteも可能
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>edit</m-b></td>
+          <td>ほとんどのリソースのread/writeはできるが、Role/RoleBindingリソースのread/writeは不可</td>
+        </tr>
+        <tr>
+          <td><m-b>view</m-b></td>
+          <td>ほとんどのリソースのreadはできるが、Role/RoleBinding、Secretのreadは不可</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>特定の操作が可能か確認するコマンド</h3>
+    <p>
+      <code><m-b>kubectl auth can-i</m-b></code>
+    </p>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.8/dexie.min.js"
